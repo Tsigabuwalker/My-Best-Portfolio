@@ -1,0 +1,339 @@
+/* 
+importing fonts from google 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+    --color-base3:#947f47;
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.color-brand2{
+    color:var(--color-brand2);
+}
+
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+
+.full-height{
+    min-height:100vh;
+    height:100%;   /* the % cant be a fking hv*/
+    display:flex;
+    flex-direction: column; /* to make the elements content one on top of the other*/
+    justify-content: center; /* to make the contents in the center of the page*/
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgb(255,255,255,0.1);
+    
+
+}
+
+.shadow-effect{
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover{
+    box-shadow: -6px 6px 0 0  var(--color-brand);
+}
+
+.iconbox{
+    width:60px;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background-color: var(--color-brand);
+    color:var(--color-base);
+
+}
+
+/* NAVBAR */
+.navbar{
+    background-color: var(--color-base);
+}
+
+.navbar .nav-link{
+    font-weight: 700;
+    text-transform: uppercase;
+    color:#fff;
+
+}
+
+.navbar .nav-link.active{
+    color: var(--color-brand);
+}
+/*
+for screen size >=992
+*/
+
+@media (min-width:992px){ 
+    .navbar{
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8) ), url(../images/sidebar-img.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .navbar-brand img{
+        border:8px solid var(--color-brand);
+    }
+
+    /* content wrapper*/
+    #content-wrapper{
+        padding-left: var(--sidbar-width);
+    }
+}
+/*
+#home{
+   background-image: url("/assets/images/home background.jpg");
+   opacity: 0.5;   
+   
+}
+*/
+/*BTN*/
+
+.btn{
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+/*for thed button in the normal state*/
+.btn-brand{
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color:var(--color-base);
+}
+.btn-brand:hover,
+.btn-brand:focus{
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+}
+
+.link-custom{
+    font-weight: 700;
+    position:relative;
+}
+
+.link-custom::after{
+    content: "";
+    width:0%;
+    height:2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left:0;
+    top:110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after{
+    width:100%;
+}
+
+/* CARD */
+
+.card-custom .card-custom-image{
+    overflow: hidden; /* the image is bounded within the card*/
+}
+
+.card-custom .card-custom-image img{
+    transition: all 0.4s ease ;
+    /*
+    	
+    translation-properety : |all Default value|. All properties will get a transition effect
+    The transition-duration:  property specifies how many seconds (s) or milliseconds (ms) a transition effect takes to complete.
+
+    The transition property is a shorthand property for: transition-property transition-duration transition-timing-function transition-delay
+    
+    The transition-timing-function property specifies the speed curve of the transition effect. This property allows a transition effect to change speed over its duration.
+        ease	Default value. Specifies a transition effect with a slow start, then fast, then end slowly (equivalent to cubic-bezier(0.25,0.1,0.25,1))
+
+    */
+}
+
+.card-custom:hover .card-custom-image img{
+    transform: scale(1.1);
+}
+
+/* CONTACT*/
+
+#contact .form-control{
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+/* SOCIAL ICONS*/
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
+
+.myi{
+    height: 100px;
+    width: 100px;
+}
+
+/* to make the paragraph in the about section */
+.aboutp{
+    text-align: justify;
+}
+
+aboutp::after{
+    content:"";
+    display: inline-block;
+    width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# A skills
+--------------------------------------------------------------*/
+
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .skill-name{
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    margin: 20px 0;
+   
+  }
+  
+  .skill-bar{
+    height: 14px;
+    background: #0b0909;
+    border-radius: 3px;
+  }
+  
+  .skill-per{
+    height: 14px;
+    background: #d13639;
+    border-radius: 3px;
+    position: relative;
+    animation: fillBars 2.5s 1;
+    color:#0b0909
+  }
+  
+  .skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background: #c5b5b5;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .skill-per::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background:#c5b5b5;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+  }
+  
+  @keyframes fillBars{
+    from{
+      width: 0;
+    }
+    to{
+      width: 100%;
+    }
+  }
+
+  .skill-logo{
+ margin-bottom: -1.5rem;
+  size: 32px;
+  }
+
+  .cv-downloa{
+    
+    margin-top: auto;
+  }
+
+  .project-title{
+    text-align: center;
+    color:#e0f780;
+  }
+
+
+  .ugr{
+    margin-left: 6rem;
+  }
+
+  

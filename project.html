@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="web development, design, portfolio, projects, skills">
+    <title>My Portifolio</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+  <!-- NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top mb-5"> <!-- fixed-top bringg contents of the home h1,p to the top-->
+    <div class="container flex-lg-column"> <!-- on large devices the tsigabu seyoum and work,about.. will be in top of one another  -->
+        <a class="navbar-brand mx-lg-auto mb-lg-4" href="#"> <!-- space b/n image and links home,... -->
+                                                            <!-- mx-lg-auto margin on left and right size -->
+            <span class="custom-logo-link ">
+             <img src="/assets/images/Tsigabuseyoum.gif" class="d-block d-lg-none myi rounded-circle" alt="my logo">
+            </span>                                          
+            
+            <!--  <span class="h3 fw-bold d-block d-lg-none">Tsigabu Seyoum</span> fw font weight-->   
+                                                           <!--on large screen hide Tsigabu Seyoum d-display -->
+             <img src="/assets/images/profile.jpg" class="d-none d-lg-block rounded-circle img-fluid  " alt="a pic of me">    
+                                                                        <!-- class="rounded-circle" makes the image circle-->
+                                                   <!--The .img-fluid class applies max-width: 100%; and height: auto; to the image:-->                                         
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto flex-lg-column text-lg-center"> <!-- ms margin start/left auto moves the li contents to the right-->
+                                             <!-- on large devices the d work,about.. will be in top of one another  -->
+                                             <li class="nav-item">
+                                                <a class="nav-link" href="/home.html" target="_blank">Home</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/project.html" target="_blank">project</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/about.html" target="_blank">About</a>
+                                            </li>
+                            
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="/contact.html" target="_blank">Contact</a>
+                                            </li>
+
+                <li class="nav-item">
+                    <a href="https://github.com/Tsigabuwalker" target="_blank"><i class="lab la-github "></i></a>
+                    <a href="https://www.facebook.com/TigieSn" target="_blank"><i class="lab la-facebook"></i></a>
+                    <a href="https://t.me/Tg_Sn12HS" target="_blank"><i class="lab la-telegram"></i></a>
+                    <a href="https://www.linkedin.com/TsigabuSeyoum" target="_blank"><i class="lab la-linkedin"></i></a>
+                </li>
+             
+            </ul>
+        </div>
+    </div>
+   
+</nav>
+
+<!-- //NAVBAR-->
+
+<div id="content-wrapper">
+  <!-- Project-->
+  <section id="project" class="full-height px-lg-5"><!--on large screen the contents on section will take the whole browser window-->
+    <div class="container">
+     <div class="row pb-4" data-aos="fade-up">
+         <div class="col-lg-8">
+             <h6 class="text-brand">project</h6>
+             <h1>My recent projects</h1>
+         </div>
+     </div>
+
+     <div class="row gy-4 card-column">
+         <div class="col-md-6" id="p1" data-aos="fade-up" data-aos-delay="200" >
+             <div class="card-custom rounded-4 bg-base shadow-effect">
+                 <div class="card-custom-image rounded-4">
+                     <img src="./assets/images/project-2.jpg" alt="my first project pic" class="img-fluid rounded-4">
+                 </div>
+                 <div class="card-custom-content p-4" >
+                     <div class="iconbox rounded-4"> <!-- rounded-4 to make the icon a little bit rounded-->
+                         <i class="lab la-java"></i> 
+                     </div>
+                     <h4>Java project</h4>
+                     <span id="dots"></span>
+                         <div id="more" style="display:none;">
+                           <h5 class="project-title">Project Information</h5>
+                           <p>Project Title: Banking Management System</p>
+                           <p>Projecr Duration:2 months</p>
+                           <p>My Role:Projecct Manager</p>
+                           <p>I recently managed a Java project that was a great success. The project was to develop a web-based application for a client that would allow them to manage their customer data. The project was challenging, but I was able to lead the team to success.</p>
+                         </div>
+
+                    <a href="#p1" class="link-custom " onclick="projectfun1()" id="linkid">Read more</a>
+                     
+                     
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-6" id="p2" data-aos="fade-up" data-aos-delay="300" >
+             <div class="card-custom rounded-4 bg-base shadow-effect">
+                 <div class="card-custom-image rounded-4">
+                     <img src="./assets/images/project-2.jpg" alt="my first project pic" class="img-fluid rounded-4">
+                 </div>
+                 <div class="card-custom-content p-4" >
+                     <div class="iconbox rounded-4"> <!-- rounded-4 to make the icon a little bit rounded-->
+                         <i class="las la-laptop-code"></i> 
+                     </div>
+                     <h4>Front-End Development Project</h4>
+                     <span id="dots2"></span>
+                         <div id="more2" style="display:none;">
+                           <h5 class="project-title">Project Information</h5>
+                           <p>Project Title: Food Delivery System</p>
+                           <p>Projecr Duration:4 months</p>
+                           <p>My Role:Front End Developer</p>
+                           <p>I recently worked on a website project for a client that was both challenging and rewarding. 
+                             The project involved creating a website from scratch for a small business. 
+                             The client had a very specific vision for the website, and it was my job to make sure that vision was realized.</p>
+                         </div>
+
+                    <a href="#p2" class="link-custom " onclick="projectfun2()" id="linkid2">Read more</a>
+                     
+                     
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-6" id="p3" data-aos="fade-up" data-aos-delay="400" >
+             <div class="card-custom rounded-4 bg-base shadow-effect">
+                 <div class="card-custom-image rounded-4">
+                     <img src="./assets/images/project-2.jpg" alt="my first project pic" class="img-fluid rounded-4">
+                 </div>
+                 <div class="card-custom-content p-4" >
+                     <div class="iconbox rounded-4"> <!-- rounded-4 to make the icon a little bit rounded-->
+                         <i class="las la-server"></i> 
+                     </div>
+                     <h4>Database Project</h4>
+                     <span id="dots3"></span>
+                         <div id="more3" style="display:none;">
+                           <h5 class="project-title">Project Information</h5>
+                           <p>Project Title: Food Delivery System</p>
+                           <p>Projecr Duration:4 months</p>
+                           <p>My Role:Database Administrator</p>
+                           <p>managing the database project was a challenging but rewarding experience. 
+                             It required a lot of planning and coordination between multiple teams, as well as a deep understanding 
+                             of database design and development. In the end, the project was a success and the organization was able
+                              to store and manage their data in an efficient and secure manner.</p>
+                         </div>
+
+                    <a href="#p3" class="link-custom " onclick="projectfun3()" id="linkid3">Read more</a>
+                     
+                     
+                 </div>
+             </div>
+         </div>
+         <div class="col-md-6" id="p4" data-aos="fade-up" data-aos-delay="500" >
+             <div class="card-custom rounded-4 bg-base shadow-effect">
+                 <div class="card-custom-image rounded-4">
+                     <img src="./assets/images/project-2.jpg" alt="my first project pic" class="img-fluid rounded-4">
+                 </div>
+                 <div class="card-custom-content p-4" >
+                     <div class="iconbox rounded-4"> <!-- rounded-4 to make the icon a little bit rounded-->
+                         <i class="lab la-php"></i> 
+                     </div>
+                     <h4>Back End Project</h4>
+                     <span id="dots4"></span>
+                         <div id="more4" style="display:none;">
+                           <h5 class="project-title">Project Information</h5>
+                           <p>Project Title: ATM MANAGEMENT SYSTEM</p>
+                           <p>Projecr Duration:1 month</p>
+                           <p>My Role:C# developer</p>
+                           <p>My project primarily consists of 7 interfaces (5 of them are account management and the other 2 are user authentication), which additionally comprise signup and login pages. each has a role and a feature that allows them to communicate with users</p>
+                         </div>
+
+                    <a href="#p4" class="link-custom " onclick="projectfun4()" id="linkid4">Read more</a>
+                     
+                     
+                 </div>
+             </div>
+         </div>
+     </div>
+    </div> 
+ </section>
+ <!-- //Project-->
+
+
+     <!-- FOOTER -->
+     <footer class="py-5 px-lg-5">
+        <div class="container">
+            <div class="row gy-4 justify-content-between">
+                <div class="col-auto">
+                    <p class="mb-0">Designed by <a href="#" class="fw-bold"> Tsigabu Seyoum </a></p>
+                    <p class="ugr fw-bold">UGR/4435/13</p>
+                    <p class="mt-3">  <i class="las la-copyright"></i> 2024 All Rights Reserverd</p>
+                </div>
+           
+                  
+                
+                <div class="col-auto">
+                    <div class="social-icons">
+                        <a href="https://github.com/Tsigabuwalker" target="_blank"><i class="lab la-github "></i></a>
+                        <a href="https://www.facebook.com/TigieSn" target="_blank"><i class="lab la-facebook"></i></a>
+                        <a href="https://t.me/Tg_Sn12HS" target="_blank"><i class="lab la-telegram"></i></a>
+                        <a href="https://www.linkedin.com/TsigabuSeyoum" target="_blank"><i class="lab la-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //FOOTER -->
+
+</div>
+
+<!-- //content wrapper-->
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/aos.js"></script>
+<script src="./assets/js/main.js"></script>
+
+
+</body>
+
+</html>
